@@ -1,0 +1,32 @@
+{
+  "collectionName": "group_orders",
+  "info": {
+    "singularName": "group-order",
+    "pluralName": "group-orders",
+    "displayName": "Group Order"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "order_id": {
+      "type": "uid"
+    },
+    "active_price_range": {
+      "type": "json"
+    },
+    "completing_rate": {
+      "type": "float"
+    },
+    "orders": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::order.order"
+    },
+    "wallet_group": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::wallet-group.wallet-group"
+    }
+  }
+}

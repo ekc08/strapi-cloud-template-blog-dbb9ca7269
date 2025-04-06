@@ -1,0 +1,27 @@
+{
+  "collectionName": "orders",
+  "info": {
+    "singularName": "order",
+    "pluralName": "orders",
+    "displayName": "Order"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "order_id": {
+      "type": "uid"
+    },
+    "active_price_range": {
+      "type": "json"
+    },
+    "isCompleted": {
+      "type": "boolean"
+    },
+    "wallet": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::wallet.wallet"
+    }
+  }
+}

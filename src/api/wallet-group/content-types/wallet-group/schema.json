@@ -1,0 +1,31 @@
+{
+  "collectionName": "wallet_groups",
+  "info": {
+    "singularName": "wallet-group",
+    "pluralName": "wallet-groups",
+    "displayName": "Wallet Group"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "active_order": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::order.order"
+    },
+    "wallets": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::wallet.wallet"
+    },
+    "group_balances": {
+      "type": "json"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::user.user"
+    }
+  }
+}
